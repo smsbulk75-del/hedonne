@@ -49,6 +49,7 @@
       letter-spacing: -0.5px;
       font-weight: 600;
       color: #b5724b;
+      cursor: pointer;
     }
 
     .logo p {
@@ -327,6 +328,7 @@
     .copyright {
       text-align: center;
       font-size: 0.85rem;
+      line-height: 1.6;
     }
 
     button.btn-submit {
@@ -391,7 +393,7 @@
       </div>
     </div>
     <div class="copyright">
-      &copy; 2026 Hedonne — Tania Biswas. All rights reserved. Crafted with passion in Kolkata.
+      © 2026 Hedonne — Tania Biswas. Powered by HIGH SPIRITS BARON LIMITED. All rights reserved.
     </div>
   </div>
 </footer>
@@ -467,7 +469,7 @@
                 <div class="input-group"><input type="email" placeholder="Email address" required></div>
                 <div class="input-group"><textarea rows="3" placeholder="Tell us about your fragrance dreams..."></textarea></div>
                 <button type="submit" class="btn btn-submit">Send Message →</button>
-                <p style="font-size:0.75rem; margin-top:12px;">We’ll reply within 24h.</p>
+                <p style="font-size:0.75rem; margin-top:12px;">We'll reply within 24h.</p>
               </form>
             </div>
           </div>
@@ -481,7 +483,7 @@
     return `
       <div class="container legal-page">
         <h1>Privacy Policy</h1>
-        <p><strong>Effective Date:</strong> 2026 | Hedonne (owned by Tania Biswas)</p>
+        <p><strong>Effective Date:</strong> 2026 | Hedonne (owned by Tania Biswas) | Powered by HIGH SPIRITS BARON LIMITED</p>
         <p>At Hedonne, we value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website or contact us.</p>
         
         <h2>1. Information We Collect</h2>
@@ -500,7 +502,7 @@
         <p>Our site uses essential cookies for navigation. You can disable them in browser settings, but some features may be affected.</p>
         
         <h2>6. Contact Us</h2>
-        <p>If you have questions about privacy, reach out to Hedonne’s owner: Tania Biswas at ${COMPANY.phone} or email ${COMPANY.email}.</p>
+        <p>If you have questions about privacy, reach out to Hedonne's owner: Tania Biswas at ${COMPANY.phone} or email ${COMPANY.email}. You may also contact HIGH SPIRITS BARON LIMITED through our official channels.</p>
         <p><em>Last updated: 2026</em></p>
       </div>
     `;
@@ -511,7 +513,7 @@
     return `
       <div class="container legal-page">
         <h1>Terms & Conditions</h1>
-        <p>Welcome to Hedonne ("Company", "we", "us", "our"). By accessing our website, you agree to these Terms & Conditions.</p>
+        <p>Welcome to Hedonne ("Company", "we", "us", "our"). By accessing our website, you agree to these Terms & Conditions. Hedonne is powered by HIGH SPIRITS BARON LIMITED.</p>
         
         <h2>1. Use of Website</h2>
         <p>This website is for personal, non-commercial use related to Hedonne perfume brand. You may not reproduce, distribute, or exploit any content without written permission from Tania Biswas / Hedonne.</p>
@@ -523,16 +525,16 @@
         <p>Currently, this site is a brand showcase. For purchases, please contact us directly via email. Future e‑commerce will be governed by separate policies. All prices are subject to change.</p>
         
         <h2>4. Intellectual Property</h2>
-        <p>The name "Hedonne", logos, bottle designs, and fragrance compositions are intellectual property of Tania Biswas. Unauthorized use is prohibited.</p>
+        <p>The name "Hedonne", logos, bottle designs, and fragrance compositions are intellectual property of Tania Biswas. HIGH SPIRITS BARON LIMITED operates under license. Unauthorized use is prohibited.</p>
         
         <h2>5. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, Hedonne shall not be liable for any indirect damages arising from use of our website or products.</p>
+        <p>To the maximum extent permitted by law, Hedonne and HIGH SPIRITS BARON LIMITED shall not be liable for any indirect damages arising from use of our website or products.</p>
         
         <h2>6. Governing Law</h2>
         <p>These terms shall be governed by the laws of India, and any disputes shall be subject to the exclusive jurisdiction of courts in Kolkata, West Bengal.</p>
         
         <h2>7. Contact Information</h2>
-        <p>For any inquiries: ${COMPANY.officialEmail} | Phone: ${COMPANY.phone} | Address: ${COMPANY.location}, PIN ${COMPANY.pincode}.</p>
+        <p>For any inquiries: ${COMPANY.officialEmail} | Phone: ${COMPANY.phone} | Address: ${COMPANY.location}, PIN ${COMPANY.pincode}. Powered by HIGH SPIRITS BARON LIMITED.</p>
         <p>© ${new Date().getFullYear()} Hedonne – All Rights Reserved.</p>
       </div>
     `;
@@ -543,10 +545,10 @@
     return `
       <div class="container legal-page">
         <h1>Contact Hedonne</h1>
-        <p style="font-size:1.2rem;">We’d love to hear from you — whether it’s a fragrance inquiry or a collaboration.</p>
+        <p style="font-size:1.2rem;">We'd love to hear from you — whether it's a fragrance inquiry or a collaboration.</p>
         
         <div style="background:#fcf6ef; padding: 30px; border-radius: 32px; margin: 32px 0;">
-          <h2 style="margin-top:0;">📌 Brand Owner</h2>
+          <h2 style="margin-top:0;">📌 Brand Owner & Management</h2>
           <p><strong>Full Name:</strong> ${COMPANY.fullName}</p>
           <p><strong>Company:</strong> ${COMPANY.company}</p>
           <p><strong>Email (Personal):</strong> ${COMPANY.email}</p>
@@ -555,6 +557,7 @@
           <p><strong>Studio Location:</strong> ${COMPANY.location}</p>
           <p><strong>Pincode:</strong> ${COMPANY.pincode}</p>
           <p><strong>City:</strong> Kolkata, West Bengal, India</p>
+          <p><strong>Powered by:</strong> HIGH SPIRITS BARON LIMITED</p>
         </div>
         
         <h2>📍 Visit Us</h2>
@@ -567,7 +570,7 @@
           <div class="input-group"><textarea rows="4" placeholder="Your message / perfume inquiry ..."></textarea></div>
           <button type="submit" class="btn btn-submit">Send to Hedonne</button>
         </form>
-        <p class="copyright-note" style="margin-top: 28px;">We respect your privacy and never share your details. Replies within 1 business day.</p>
+        <p class="copyright-note" style="margin-top: 28px;">We respect your privacy and never share your details. Replies within 1 business day. © HIGH SPIRITS BARON LIMITED support.</p>
       </div>
     `;
   }
@@ -596,44 +599,28 @@
     if (currentPage === "home") {
       const form = document.getElementById("quickContactForm");
       if (form) {
-        form.addEventListener("submit", (e) => {
+        // remove previous listener to avoid dupes
+        const newForm = form.cloneNode(true);
+        form.parentNode.replaceChild(newForm, form);
+        newForm.addEventListener("submit", (e) => {
           e.preventDefault();
           alert(`✨ Thank you! Hedonne (${COMPANY.email}) will respond soon. Fragrance awaits!`);
-          form.reset();
+          newForm.reset();
         });
       }
     }
     if (currentPage === "contactpage") {
       const directForm = document.getElementById("directContactForm");
       if (directForm) {
-        directForm.addEventListener("submit", (e) => {
+        const freshForm = directForm.cloneNode(true);
+        directForm.parentNode.replaceChild(freshForm, directForm);
+        freshForm.addEventListener("submit", (e) => {
           e.preventDefault();
-          alert(`📩 Message sent to ${COMPANY.officialEmail}. We’ll craft a reply just for you.`);
-          directForm.reset();
+          alert(`📩 Message sent to ${COMPANY.officialEmail}. We'll craft a reply just for you. (Powered by HIGH SPIRITS BARON LIMITED)`);
+          freshForm.reset();
         });
       }
     }
-    // also handle possible contact form inside home already done. 
-    // ensure home contact works
-    if (currentPage === "home") {
-      const existingContactForm = document.getElementById("quickContactForm");
-      if (existingContactForm && !existingContactForm.hasListener) {
-        // avoid duplicate listeners, use flag
-        existingContactForm.removeEventListener("submit", (e) => {});
-        existingContactForm.addEventListener("submit", (e) => {
-          e.preventDefault();
-          alert(`✨ Thank you! Hedonne (${COMPANY.email}) will respond soon. Fragrance awaits!`);
-          existingContactForm.reset();
-        });
-        existingContactForm.hasListener = true;
-      }
-    }
-
-    // update active nav highlight? just smoothness
-    const privacyLinks = document.querySelectorAll("#privacyNav, a[href='?page=privacy']");
-    const termsLinks = document.querySelectorAll("#termsNav, a[href='?page=terms']");
-    const contactPageLinks = document.querySelectorAll("#contactPageNav, a[href='?page=contactpage']");
-    // optional style
   }
 
   function navigate(pageId) {
@@ -646,7 +633,7 @@
     window.history.pushState({}, "", url);
   }
 
-  // handle nav clicks & footer links
+  // bind global navigation
   function bindGlobalNav() {
     document.addEventListener("click", (e) => {
       const link = e.target.closest("a");
@@ -672,14 +659,18 @@
           navigate("home");
           window.scrollTo({ top: 0, behavior: "smooth" });
         }
-        else if (link.getAttribute("href") && link.getAttribute("href").startsWith("#")) {
-          // internal hash only if home
-          const hashId = link.getAttribute("href").substring(1);
-          if (hashId === "contact" && currentPage !== "home") navigate("home");
-          setTimeout(() => {
-            const target = document.getElementById(hashId);
-            if (target) target.scrollIntoView({ behavior: "smooth" });
-          }, 80);
+        else if (href && (href === "#contact" || href === "#home")) {
+          e.preventDefault();
+          if (href === "#contact") {
+            if (currentPage !== "home") navigate("home");
+            setTimeout(() => {
+              const cont = document.getElementById("contact");
+              if (cont) cont.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+          } else if (href === "#home") {
+            navigate("home");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
         }
       } else if (href && (href === "#contact" || href === "#home")) {
         e.preventDefault();
@@ -697,7 +688,7 @@
     });
   }
 
-  // handle initial route
+  // initial routing
   function initRouting() {
     const params = new URLSearchParams(window.location.search);
     const pageParam = params.get("page");
@@ -707,15 +698,14 @@
     else currentPage = "home";
     render();
     bindGlobalNav();
-    // attach manual listener for logo or home
-    const logoLink = document.querySelector(".logo h1, .logo");
-    if (logoLink) {
-      logoLink.addEventListener("click", (e) => {
+    
+    const logoArea = document.querySelector(".logo h1");
+    if (logoArea) {
+      logoArea.addEventListener("click", (e) => {
         e.preventDefault();
         navigate("home");
       });
     }
-    // add back button popstate
     window.addEventListener("popstate", () => {
       const newParams = new URLSearchParams(window.location.search);
       const p = newParams.get("page");
