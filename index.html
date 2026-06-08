@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Hedonne | Luxury Perfume Brand</title>
+  <!-- Google Fonts & simple reset -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefaf5;
+      color: #2c2418;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header & nav */
+    header {
+      background: #fff9f2;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.02), 0 1px 0 #f0e6db;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      letter-spacing: -0.5px;
+      font-weight: 600;
+      color: #b5724b;
+    }
+
+    .logo p {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: #8b6b4f;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #3e2c1e;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #b5724b;
+    }
+
+    /* hero section */
+    .hero {
+      background: linear-gradient(105deg, #f6ede5 0%, #fff4ed 100%);
+      padding: 80px 0 60px;
+      border-bottom: 1px solid #eedbcb;
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-text {
+      flex: 1.2;
+    }
+
+    .hero-text .brand-tag {
+      color: #b5724b;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .hero-text h2 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      color: #2c1b0f;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #5a4635;
+      max-width: 500px;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #b5724b;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid #b5724b;
+      color: #b5724b;
+    }
+
+    .btn-outline:hover {
+      background: #b5724b;
+      color: white;
+    }
+
+    .hero-image {
+      flex: 1;
+      background: #ecd9ca;
+      border-radius: 60px 20px 60px 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+    }
+
+    .hero-image span {
+      font-size: 6rem;
+      display: block;
+    }
+
+    /* perfume essence */
+    .perfume-highlight {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 48px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: #2c1b0f;
+    }
+
+    .fragrance-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 28px;
+      padding: 32px 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 4px rgba(0,0,0,0.02);
+      flex: 1;
+      min-width: 200px;
+      transition: all 0.25s;
+      border: 1px solid #f0e2d6;
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      color: #b5724b;
+    }
+
+    .card p {
+      color: #5f4a35;
+    }
+
+    /* contact / info grid */
+    .contact-section {
+      background: #fff7f0;
+      padding: 80px 0;
+      border-top: 1px solid #eedbcb;
+      border-bottom: 1px solid #eedbcb;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+    }
+
+    .contact-details {
+      flex: 1;
+    }
+
+    .contact-details h3, .contact-form h3 {
+      font-size: 1.7rem;
+      margin-bottom: 24px;
+    }
+
+    .info-line {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+
+    .info-line strong {
+      min-width: 100px;
+      color: #b5724b;
+    }
+
+    .map-preview {
+      background: #e7d9cf;
+      border-radius: 24px;
+      padding: 20px;
+      margin-top: 28px;
+      font-size: 0.9rem;
+      color: #3a2c1f;
+    }
+
+    .contact-form {
+      flex: 1;
+      background: white;
+      padding: 32px;
+      border-radius: 32px;
+      box-shadow: 0 15px 30px -12px rgba(0,0,0,0.05);
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group input, .input-group textarea {
+      width: 100%;
+      padding: 12px 18px;
+      border: 1px solid #e2cfbf;
+      border-radius: 60px;
+      font-family: inherit;
+      background: #fffdfb;
+    }
+
+    .input-group textarea {
+      border-radius: 24px;
+      resize: vertical;
+    }
+
+    /* legal pages style (privacy, terms, contact page) */
+    .legal-page {
+      padding: 80px 0;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .legal-page h1 {
+      font-size: 2.4rem;
+      margin-bottom: 24px;
+      color: #2c1b0f;
+    }
+
+    .legal-page h2 {
+      margin: 32px 0 16px;
+      font-size: 1.4rem;
+      color: #b5724b;
+    }
+
+    .legal-page p, .legal-page li {
+      margin-bottom: 16px;
+      color: #3a2c1f;
+      line-height: 1.6;
+    }
+
+    .legal-page ul {
+      margin-left: 24px;
+      margin-bottom: 24px;
+    }
+
+    footer {
+      background: #231f1b;
+      color: #cfc3b6;
+      padding: 40px 0 24px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid #3f3328;
+      padding-bottom: 32px;
+      margin-bottom: 24px;
+    }
+
+    .footer-links a {
+      color: #cfc3b6;
+      text-decoration: none;
+      margin-left: 24px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #e4bc9a;
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    button.btn-submit {
+      background: #b5724b;
+      border: none;
+      width: 100%;
+    }
+
+    @media (max-width: 780px) {
+      .navbar {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .nav-links {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .hero-text h2 {
+        font-size: 2.4rem;
+      }
+      .footer-links a {
+        margin: 0 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1>Hedonne</h1>
+        <p>LUXURY PERFUMERY</p>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="?page=privacy" id="privacyNav">Privacy</a></li>
+        <li><a href="?page=terms" id="termsNav">Terms</a></li>
+        <li><a href="?page=contactpage" id="contactPageNav">Info</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main id="app-root">
+  <!-- dynamic content will be injected here -->
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <strong style="color:#e4bc9a;">Hedonne</strong> — Essence of Elegance
+      </div>
+      <div class="footer-links">
+        <a href="?page=privacy">Privacy Policy</a>
+        <a href="?page=terms">Terms & Conditions</a>
+        <a href="?page=contactpage">Contact Page</a>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Hedonne — Tania Biswas. All rights reserved. Crafted with passion in Kolkata.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Company data
+  const COMPANY = {
+    fullName: "Tania Biswas",
+    email: "taniabiswas2000@gmail.com",
+    phone: "9051196426",
+    company: "Hedonne",
+    location: "Ground & First Floor, Hedonne, Altitude Building 2, O.C. Ganguly Sarani, Formerly, Lee Rd, Kolkata, West Bengal",
+    pincode: "700020",
+    officialEmail: "Info@hedonne.in"
+  };
+
+  // Helper: generate home page (brand + contact snippet)
+  function homePage() {
+    return `
+      <section id="home">
+        <div class="hero">
+          <div class="container hero-grid">
+            <div class="hero-text">
+              <div class="brand-tag">✨ Artisanal Fragrance House</div>
+              <h2>Where Perfume <br>Becomes Memory</h2>
+              <p>Hedonne crafts exclusive, timeless perfumes inspired by the soul of Kolkata. Natural, long-lasting, and utterly distinctive.</p>
+              <a href="#contact" class="btn">Discover Collection</a>
+            </div>
+            <div class="hero-image">
+              <span>🌸✨</span>
+              <p style="margin-top: 16px; font-weight: 500;">Signature Eaux de Parfum</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="perfume-highlight container">
+          <h2 class="section-title">Our Olfactory Signature</h2>
+          <div class="fragrance-cards">
+            <div class="card">
+              <h3>Oud Royale</h3>
+              <p>Deep, smoky oud with saffron and amber — a mysterious journey.</p>
+            </div>
+            <div class="card">
+              <h3>Jasmine Sutra</h3>
+              <p>Bengal night jasmine, fresh tea leaves and sandalwood.</p>
+            </div>
+            <div class="card">
+              <h3>Hedonne Vétiver</h3>
+              <p>Earthy vetiver, bergamot, and white musk — pure sophistication.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-section" id="contact">
+          <div class="container contact-wrapper">
+            <div class="contact-details">
+              <h3>📍 Meet Hedonne</h3>
+              <div class="info-line"><strong>Founder</strong> Tania Biswas</div>
+              <div class="info-line"><strong>Email</strong> ${COMPANY.email}</div>
+              <div class="info-line"><strong>Official</strong> ${COMPANY.officialEmail}</div>
+              <div class="info-line"><strong>Phone</strong> ${COMPANY.phone}</div>
+              <div class="info-line"><strong>Studio</strong> ${COMPANY.location}</div>
+              <div class="info-line"><strong>Pincode</strong> ${COMPANY.pincode}</div>
+              <div class="map-preview">
+                🏛️ Altitude Building 2, O.C. Ganguly Sarani, Kolkata 700020<br>
+                <span style="font-size:0.75rem;">Visit by appointment — fragrance consultations available.</span>
+              </div>
+            </div>
+            <div class="contact-form">
+              <h3>Whisper a Note</h3>
+              <form id="quickContactForm">
+                <div class="input-group"><input type="text" placeholder="Your name" required></div>
+                <div class="input-group"><input type="email" placeholder="Email address" required></div>
+                <div class="input-group"><textarea rows="3" placeholder="Tell us about your fragrance dreams..."></textarea></div>
+                <button type="submit" class="btn btn-submit">Send Message →</button>
+                <p style="font-size:0.75rem; margin-top:12px;">We’ll reply within 24h.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    `;
+  }
+
+  // Privacy Policy page
+  function privacyPolicyPage() {
+    return `
+      <div class="container legal-page">
+        <h1>Privacy Policy</h1>
+        <p><strong>Effective Date:</strong> 2026 | Hedonne (owned by Tania Biswas)</p>
+        <p>At Hedonne, we value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard information when you visit our website or contact us.</p>
+        
+        <h2>1. Information We Collect</h2>
+        <p>We may collect personal information such as your name, email address, phone number, and any message you submit via our contact form. Additionally, browsing data (cookies) may be used to improve site experience.</p>
+        
+        <h2>2. How We Use Your Information</h2>
+        <p>To respond to inquiries, provide customer service regarding our perfume collections, send updates about Hedonne products (only with consent), and improve our brand experience.</p>
+        
+        <h2>3. Data Sharing & Security</h2>
+        <p>We do not sell or rent your personal data. We may share necessary info with delivery partners if you purchase (future e‑commerce). Your data is stored securely, and we implement appropriate measures.</p>
+        
+        <h2>4. Your Rights</h2>
+        <p>You may request access, correction, or deletion of your personal data by contacting ${COMPANY.email} or ${COMPANY.officialEmail}. We respond within 30 days.</p>
+        
+        <h2>5. Cookies</h2>
+        <p>Our site uses essential cookies for navigation. You can disable them in browser settings, but some features may be affected.</p>
+        
+        <h2>6. Contact Us</h2>
+        <p>If you have questions about privacy, reach out to Hedonne’s owner: Tania Biswas at ${COMPANY.phone} or email ${COMPANY.email}.</p>
+        <p><em>Last updated: 2026</em></p>
+      </div>
+    `;
+  }
+
+  // Terms & Conditions
+  function termsPage() {
+    return `
+      <div class="container legal-page">
+        <h1>Terms & Conditions</h1>
+        <p>Welcome to Hedonne ("Company", "we", "us", "our"). By accessing our website, you agree to these Terms & Conditions.</p>
+        
+        <h2>1. Use of Website</h2>
+        <p>This website is for personal, non-commercial use related to Hedonne perfume brand. You may not reproduce, distribute, or exploit any content without written permission from Tania Biswas / Hedonne.</p>
+        
+        <h2>2. Product Information</h2>
+        <p>Hedonne perfumes are handcrafted in small batches. While we strive for accuracy, slight variations in scent or color may occur due to natural ingredients. We retain the right to modify product descriptions.</p>
+        
+        <h2>3. Orders & Payments</h2>
+        <p>Currently, this site is a brand showcase. For purchases, please contact us directly via email. Future e‑commerce will be governed by separate policies. All prices are subject to change.</p>
+        
+        <h2>4. Intellectual Property</h2>
+        <p>The name "Hedonne", logos, bottle designs, and fragrance compositions are intellectual property of Tania Biswas. Unauthorized use is prohibited.</p>
+        
+        <h2>5. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Hedonne shall not be liable for any indirect damages arising from use of our website or products.</p>
+        
+        <h2>6. Governing Law</h2>
+        <p>These terms shall be governed by the laws of India, and any disputes shall be subject to the exclusive jurisdiction of courts in Kolkata, West Bengal.</p>
+        
+        <h2>7. Contact Information</h2>
+        <p>For any inquiries: ${COMPANY.officialEmail} | Phone: ${COMPANY.phone} | Address: ${COMPANY.location}, PIN ${COMPANY.pincode}.</p>
+        <p>© ${new Date().getFullYear()} Hedonne – All Rights Reserved.</p>
+      </div>
+    `;
+  }
+
+  // Dedicated contact page (full details)
+  function contactInfoPage() {
+    return `
+      <div class="container legal-page">
+        <h1>Contact Hedonne</h1>
+        <p style="font-size:1.2rem;">We’d love to hear from you — whether it’s a fragrance inquiry or a collaboration.</p>
+        
+        <div style="background:#fcf6ef; padding: 30px; border-radius: 32px; margin: 32px 0;">
+          <h2 style="margin-top:0;">📌 Brand Owner</h2>
+          <p><strong>Full Name:</strong> ${COMPANY.fullName}</p>
+          <p><strong>Company:</strong> ${COMPANY.company}</p>
+          <p><strong>Email (Personal):</strong> ${COMPANY.email}</p>
+          <p><strong>Official Email:</strong> ${COMPANY.officialEmail}</p>
+          <p><strong>Phone / WhatsApp:</strong> ${COMPANY.phone}</p>
+          <p><strong>Studio Location:</strong> ${COMPANY.location}</p>
+          <p><strong>Pincode:</strong> ${COMPANY.pincode}</p>
+          <p><strong>City:</strong> Kolkata, West Bengal, India</p>
+        </div>
+        
+        <h2>📍 Visit Us</h2>
+        <p>Ground & First Floor, Hedonne, Altitude Building 2, O.C. Ganguly Sarani (formerly Lee Road), Kolkata - 700020. We recommend booking an appointment for a private perfume consultation.</p>
+        
+        <h2>📧 Send a Direct Message</h2>
+        <form id="directContactForm">
+          <div class="input-group"><input type="text" placeholder="Your Name" required></div>
+          <div class="input-group"><input type="email" placeholder="Your Email" required></div>
+          <div class="input-group"><textarea rows="4" placeholder="Your message / perfume inquiry ..."></textarea></div>
+          <button type="submit" class="btn btn-submit">Send to Hedonne</button>
+        </form>
+        <p class="copyright-note" style="margin-top: 28px;">We respect your privacy and never share your details. Replies within 1 business day.</p>
+      </div>
+    `;
+  }
+
+  // Router & UI
+  let currentPage = "home"; // home, privacy, terms, contactpage
+
+  function render() {
+    const root = document.getElementById("app-root");
+    if (!root) return;
+    let content = "";
+    if (currentPage === "home") {
+      content = homePage();
+    } else if (currentPage === "privacy") {
+      content = privacyPolicyPage();
+    } else if (currentPage === "terms") {
+      content = termsPage();
+    } else if (currentPage === "contactpage") {
+      content = contactInfoPage();
+    } else {
+      content = homePage();
+    }
+    root.innerHTML = content;
+
+    // After render attach form handlers if any contact form exists
+    if (currentPage === "home") {
+      const form = document.getElementById("quickContactForm");
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert(`✨ Thank you! Hedonne (${COMPANY.email}) will respond soon. Fragrance awaits!`);
+          form.reset();
+        });
+      }
+    }
+    if (currentPage === "contactpage") {
+      const directForm = document.getElementById("directContactForm");
+      if (directForm) {
+        directForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert(`📩 Message sent to ${COMPANY.officialEmail}. We’ll craft a reply just for you.`);
+          directForm.reset();
+        });
+      }
+    }
+    // also handle possible contact form inside home already done. 
+    // ensure home contact works
+    if (currentPage === "home") {
+      const existingContactForm = document.getElementById("quickContactForm");
+      if (existingContactForm && !existingContactForm.hasListener) {
+        // avoid duplicate listeners, use flag
+        existingContactForm.removeEventListener("submit", (e) => {});
+        existingContactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert(`✨ Thank you! Hedonne (${COMPANY.email}) will respond soon. Fragrance awaits!`);
+          existingContactForm.reset();
+        });
+        existingContactForm.hasListener = true;
+      }
+    }
+
+    // update active nav highlight? just smoothness
+    const privacyLinks = document.querySelectorAll("#privacyNav, a[href='?page=privacy']");
+    const termsLinks = document.querySelectorAll("#termsNav, a[href='?page=terms']");
+    const contactPageLinks = document.querySelectorAll("#contactPageNav, a[href='?page=contactpage']");
+    // optional style
+  }
+
+  function navigate(pageId) {
+    currentPage = pageId;
+    render();
+    // update browser URL without reload
+    const url = new URL(window.location);
+    url.searchParams.set("page", pageId === "home" ? "" : pageId);
+    if (pageId === "home") url.searchParams.delete("page");
+    window.history.pushState({}, "", url);
+  }
+
+  // handle nav clicks & footer links
+  function bindGlobalNav() {
+    document.addEventListener("click", (e) => {
+      const link = e.target.closest("a");
+      if (!link) return;
+      const href = link.getAttribute("href");
+      if (href && href.includes("?page=")) {
+        e.preventDefault();
+        const pageParam = href.split("?page=")[1]?.split("&")[0];
+        if (pageParam === "privacy") navigate("privacy");
+        else if (pageParam === "terms") navigate("terms");
+        else if (pageParam === "contactpage") navigate("contactpage");
+        else if (pageParam === "home" || !pageParam) navigate("home");
+        else if (link.getAttribute("href") === "#contact") {
+          e.preventDefault();
+          if (currentPage !== "home") navigate("home");
+          setTimeout(() => {
+            const contactSec = document.getElementById("contact");
+            if (contactSec) contactSec.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        }
+        else if (link.getAttribute("href") === "#home") {
+          e.preventDefault();
+          navigate("home");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+        else if (link.getAttribute("href") && link.getAttribute("href").startsWith("#")) {
+          // internal hash only if home
+          const hashId = link.getAttribute("href").substring(1);
+          if (hashId === "contact" && currentPage !== "home") navigate("home");
+          setTimeout(() => {
+            const target = document.getElementById(hashId);
+            if (target) target.scrollIntoView({ behavior: "smooth" });
+          }, 80);
+        }
+      } else if (href && (href === "#contact" || href === "#home")) {
+        e.preventDefault();
+        if (href === "#contact") {
+          if (currentPage !== "home") navigate("home");
+          setTimeout(() => {
+            const cont = document.getElementById("contact");
+            if (cont) cont.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        } else if (href === "#home") {
+          navigate("home");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }
+    });
+  }
+
+  // handle initial route
+  function initRouting() {
+    const params = new URLSearchParams(window.location.search);
+    const pageParam = params.get("page");
+    if (pageParam === "privacy") currentPage = "privacy";
+    else if (pageParam === "terms") currentPage = "terms";
+    else if (pageParam === "contactpage") currentPage = "contactpage";
+    else currentPage = "home";
+    render();
+    bindGlobalNav();
+    // attach manual listener for logo or home
+    const logoLink = document.querySelector(".logo h1, .logo");
+    if (logoLink) {
+      logoLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        navigate("home");
+      });
+    }
+    // add back button popstate
+    window.addEventListener("popstate", () => {
+      const newParams = new URLSearchParams(window.location.search);
+      const p = newParams.get("page");
+      if (p === "privacy") currentPage = "privacy";
+      else if (p === "terms") currentPage = "terms";
+      else if (p === "contactpage") currentPage = "contactpage";
+      else currentPage = "home";
+      render();
+    });
+  }
+
+  initRouting();
+</script>
+</body>
+</html>
